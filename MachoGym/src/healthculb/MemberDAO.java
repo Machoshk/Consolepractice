@@ -13,24 +13,21 @@ public class MemberDAO {
 	}
 	public void init() {
 		Member m1 = new Member();
-		m1.setName("Chris");
+		m1.setName("홍두깨");
 		m1.setPhone("010-2324-1111");
-		m1.setSex("M\n");
-		m1.setRegDate("2021-10-15");
+		m1.setSex("남성\n");
 		this.members.add(m1);
 		
 		Member m2 = new Member();
-		m2.setName("Keun");
+		m2.setName("문가인");
 		m2.setPhone("010-5545-2323");
-		m2.setSex("F\n");
-		m2.setRegDate("2016-04-11");
+		m2.setSex("여성\n");
 		this.members.add(m2);
 
 		Member m3 = new Member();
-		m3.setName("Moon");
+		m3.setName("최두식");
 		m3.setPhone("010-7765-4342");
-		m3.setSex("M\n");
-		m3.setRegDate("2018-01-11");
+		m3.setSex("남성\n");
 		this.members.add(m3);
 	}
 	
@@ -41,7 +38,7 @@ public class MemberDAO {
 		return result;
 	}
 	
-	// 회원 정보 저장 메서드
+	// 회원정보저장 메서드
 	public void memberAdd(Member m)throws Exception{
 		if(this.memberCheck(m)) {
 			this.members.add(m);
@@ -50,11 +47,10 @@ public class MemberDAO {
 		}
 	}
 	
-	// 중복 회원 검사 private 메소드
+	// 중복회원검사 private 메소드
 	private boolean memberCheck(Member m) {
 		boolean result = true;
 	
-		// 기존 회원들의 정보와 전달받은 member 객체의 정보를 비교하는 과정
 		for(Member member : this.members) {
 			if(member.getName().equals(m.getName()) && member.getPhone().equals(m.getPhone()) && member.getSex().equals(m.getSex())) {
 				result = false;

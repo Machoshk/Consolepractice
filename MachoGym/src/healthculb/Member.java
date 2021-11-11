@@ -5,7 +5,7 @@ public class Member {
 		private String Name; 
 		private String Phone; 
 		private String Sex; 
-		private String regDate;
+
 		
 		
 		public String getName() {
@@ -26,12 +26,7 @@ public class Member {
 		public void setSex(String Sex) {
 			this.Sex = Sex;
 		}
-		public String getRegDate() {
-			return regDate;
-		}
-		public void setRegDate(String regDate) {
-			this.regDate = regDate;
-		}
+
 		@Override
 		public String toString() {
 			return "NAME : " + Name + " PHONE : " + Phone + "Sex : " + Sex;
